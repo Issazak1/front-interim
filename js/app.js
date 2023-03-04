@@ -1,5 +1,6 @@
 const app = {
-  defaultPage: "Missions",
+  defaultPage: "missions",
+  api: "http://localhost:3000",
   templates: new Map(),
   controllers: {},
   content: document.getElementById("app"),
@@ -11,22 +12,28 @@ app.init = function () {
   });
 
   this.navigate(this.defaultPage);
-  window.dispatchEvent(new HashChangeEvent('hashchange'));
+  window.dispatchEvent(new HashChangeEvent("hashchange"));
 };
+
 app.navigate = (path) => {
   window.location.hash = `#${path}`;
 };
+
 app.displayTpl = async (tpl) => {
   //récupére le template
   if (!app.templates.has(tpl)) {
     await app.loadTemplate(tpl);
   }
+
   const _tpl = app.templates.get(tpl);
   app.content.innerHTML = _tpl;
+
   //Init controller
   if (app.controllers[tpl] != null) {
     app.controllers[tpl].init();
-  }};
+  }
+};
+
 app.loadTemplate = function (tpl) {
   return $.ajax({
     type: "GET",
@@ -36,5 +43,8 @@ app.loadTemplate = function (tpl) {
     .then((data) => {
       app.templates.set(tpl, data);
     })
-    .fail(() => {alert("Impossible de récupérer le template");});};
+    .fail(() => {
+      alert("Impossible de récupérer le template");
+    });
+};
 app.init();

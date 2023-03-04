@@ -5,40 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>recherche interimaires</title>
-    <link
-      rel="stylesheet"
-      href=".\node_modules\bootstrap\dist\css\bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet"href=".\node_modules\bootstrap\dist\css\bootstrap.min.css"/>
+    <style>
+
+  
+  .navbar {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  transition: height 0.5s;
+}
+
+.navbar:hover .navbar-brand {
+  transform: translateX(50%);
+  transition: transform 0.5s;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 10;
+  top: 10%;
+  transform: translateX(0%);
+  transition: transform 0.5s;
+}
+</style>
+
   </head>
+  
 <header>
   <body>
     
       <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#Home">Home</a>
+    <a class="navbar-brand" href="#home">Home</a>
   </div>
 </nav>
 
     </nav>
     <nav class="navbar navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#Sociétés">Sociétés Clientes</a>
+        <a class="navbar-brand" href="#sociétés">Sociétés Clientes</a>
       </div>
     </nav>
     <nav class="navbar navbar-light" style="background-color: #6094e4">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#Interimaires">Interimaires</a>
+        <a class="navbar-brand" href="#interimaires">Interimaires</a>
       </div>
     </nav>
     <nav class="navbar navbar-light" style="background-color: #b1ddfc">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#Missions">Missions</a>
+        <a class="navbar-brand" href="#missions">Missions</a>
       </div>
     </nav>
     <nav class="navbar navbar-ultlight" style="background-color: #e3f2fd">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#Contact">Contact</a>
+        <a class="navbar-brand" href="#contact">Contact</a>
       </div>
     </nav>
     <br />

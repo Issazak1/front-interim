@@ -1,19 +1,104 @@
 <h1>Missions</h1>
 
-<div class="row" id="container-list ">
-    <div class="col-12">
-    <table class="table table-striped"> 
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Mission</th>
-      <th scope="col">Societe</th>
-      <th scope="col">Lieu et date</th>
-      <th scope="col">Interimaire</th>
-    </tr>
-  </thead>
-   <table>
-   <tbody>
-   </tbody>
-</div>
-</div>
+<form>
+  <div class="row mt-2">
+    <label for="companyName">Mission</label>
+    <input
+      type=""
+      class="form-control"
+      id="name"
+      name="name"
+      required
+      placeholder="mission"
+    />
+  </div>
+
+  <div class="row mt-2">
+    <label for="companyName">Nom de la société</label>
+    <input
+      type=""
+      class="form-control"
+      id="ste"
+      name="ste"
+      required
+      placeholder="Entrez le nom de la société"
+    />
+  </div>
+
+  <form action="" onsubmit="return validateDate()">
+    <div class="form-group">
+      <label for="date">Date de debut:</label>
+      <input
+        type="date"
+        class="form-control"
+        name="Sdate"
+        id="Sdate"
+        required
+      />
+    </div>
+
+    <form action="" onsubmit="return validateDate()">
+      <div class="form-group">
+        <label for="date">Date de fin:</label>
+        <input
+          type="date"
+          class="form-control"
+          name="Edate"
+          id="Edate"
+          required
+        />
+      </div>
+
+      <div class="form-group mt-2">
+        <label for="name">Nom et prenom de l'interimaire</label>
+        <input
+          type="text"
+          class="form-control"
+          name="inter"
+          id="inter"
+          required
+          placeholder="Entrez le nom et prenom de l'interimaire"
+        /><br /><br />
+      </div>
+
+      <button
+        type="button"
+        class="btn btn-danger"
+        onclick="missions.toggleForm()"
+      >
+        Annuler
+      </button>
+      <button
+        type="submit mt-2"
+        class="btn btn-secondary"
+        onclick="missions.save(event)"
+      >
+        Envoyer
+      </button>
+    </form>
+
+    <div class="row mt-4" id="container-list">
+      <div class="col-12 d-flex flex-row-reverse">
+        <button class="btn btn-secondary" onclick="missions.edit()">
+          Nouvelle mission
+        </button>
+      </div>
+
+      <div class="col-12">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Mission</th>
+              <th scope="col">Societe</th>
+              <th scope="col">Date debut</th>
+              <th scope="col">Date fin</th>
+              <th scope="col">Interimaire</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+</form>

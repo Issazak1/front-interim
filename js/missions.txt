@@ -75,7 +75,7 @@ missions.save = async (event) => {
     const missionsSaved = await $.ajax({
       type: "POST",
       url: `${app.api}/missions/`,
-      data: { id, name, ste, Sdate, Edate, inter },
+      data: { name, ste, Sdate, Edate, inter },
     });
     missions.data.push(missionsSaved);
   }
@@ -99,10 +99,6 @@ missions.fillForm = (index) => {
   if (record != null) {
     $('input[name="id"]').val(record.id);
     $('input[name="name"]').val(record.name);
-    $('input[name="ste"]').val(record.ste);
-    $('input[name="Sdate"]').val(record.Sdate);
-    $('input[name="Edate"]').val(record.Edate);
-    $('input[name="inter"]').val(record.inter);
   }
 };
 

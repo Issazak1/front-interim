@@ -7,6 +7,45 @@
     <title>Document</title>
   </head>
   <body>
-    
+    <div
+      style="
+        background-image: url('image3.jpg');
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        style="
+          background-image: url('image3.jpg');
+          background-repeat: no-repeat;
+          height: 500px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div
+          style="text-align: center; animation: slidein 3s; margin-top: 150px"
+        >
+          <h1>Des compétences sur mesure pour votre entreprise</h1>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @keyframes slidein {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      }
+    </style>
   </body>
 </html>
