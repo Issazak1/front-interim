@@ -11,6 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "gulp-concat": "^2.6.1",
     "jquery": "^3.6.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.28.3",
+    "gulp": "^4.0.2"
   }
 }

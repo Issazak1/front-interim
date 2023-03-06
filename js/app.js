@@ -1,10 +1,11 @@
 const app = {
-  defaultPage: "missions",
+  defaultPage: "sociétés",
   api: "http://localhost:3000",
   templates: new Map(),
   controllers: {},
   content: document.getElementById("app"),
 };
+
 app.init = function () {
   window.addEventListener("hashchange", () => {
     const tplName = window.location.hash.slice(1);
